@@ -1,0 +1,26 @@
+CalendarSMS for Django
+======================
+http://github.com/gotlium/django-calendar-sms
+
+
+What's that
+-----------
+This reusable Django app can help you to send sms via Google Calendar.
+------------------------------------------
+
+How to use
+----------
+1. python setup.py install
+2. Add the 'calendarsms' application to 'INSTALLED_APPS' in your settings file (usually 'settings.py')
+3. Drop old db table named as django_site (DROP TABLE `django_site`;)
+4. Sync database (./manage.py syncdb)
+5. Setup Google Account data in current website config on admin panel.
+6. Try to send sms:
+    from calendarsms.calendarsms import sendSMS
+    print sendSMS('Hello, World!')
+
+------------------------------------------
+
+Forked by GoTLiuM InSPiRiT as part of the Django CalendarSMS project from calendarSMS.
+calendarSMS Author: vassio <vassio@ukr.net>
+calendarSMS Url: http://codepaste.ru/11229/
