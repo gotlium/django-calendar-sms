@@ -24,7 +24,7 @@ setup(
 		'Environment :: Web Environment',
 		'Framework :: Django',
 		'Intended Audience :: Developers',
-		'License :: GPL',
+		'License :: OSI Approved :: GNU General Public License (GPL)',
 		'Operating System :: OS Independent',
 		'Programming Language :: Python',
 		],
