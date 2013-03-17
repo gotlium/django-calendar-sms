@@ -17,7 +17,7 @@ How to use:
 3. Sync database (./manage.py syncdb)
 4. Setup Google Account data for current website on admin panel.
 5. Try to send sms from console ($ ./manage.py shell):
-    >>> from calendarsms.calendarsms import sendSMS
+    >>> from calendar_sms.calendar_sms import sendSMS
     >>> print sendSMS('Hello, World!')
 
 ------------------------------------------
