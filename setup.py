@@ -13,6 +13,9 @@ setup(
     author_email='gotlium@gmail.com',
     url='http://github.com/gotlium/django-calendar-sms',
     packages=['calendar_sms'],
+    package_data={'calendar_sms': [
+        'locale/ru/LC_MESSAGES/django.*',
+    ]},
     include_package_data=True,
     install_requires=['setuptools', 'gdata', 'django'],
     zip_safe=False,
