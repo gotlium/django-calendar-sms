@@ -135,7 +135,16 @@ INSTALLED_APPS = (
     # 'django.contrib.admindocs',
     'calendar_sms',
     # 'rosetta',
+
 )
+
+try:
+    import celery
+
+    INSTALLED_APPS += ('djcelery',)
+    CELERY_IMPORTS = ('calendar_sms',)
+except ImportError:
+    pass
 
 # A sample logging configuration. The only tangible logging
 # performed by this configuration is to send an email to

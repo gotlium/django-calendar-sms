@@ -11,11 +11,14 @@ Google Calendar (for free) on your Django Project.
 
 Installation:
 ----------
-1. git clone https://github.com/gotlium/django-calendar-sms.git
-2. cd django-calendar-sms && python setup.py install
-3. Add the 'calendar_sms' application to 'INSTALLED_APPS' in your
+1. Package:
+    $ git clone https://github.com/gotlium/django-calendar-sms.git
+    $ cd django-calendar-sms && sudo python setup.py install
+    OR
+    $ sudo pip install django-calendar-sms
+2. Add the 'calendar_sms' application to 'INSTALLED_APPS' in your
     settings file (usually 'settings.py')
-4. Sync database (./manage.py syncdb)
+3. Sync database (./manage.py syncdb)
 
 Usage:
 ----------
@@ -23,6 +26,23 @@ Usage:
 2. Try to send sms from console (./manage.py shell):
     >>> from calendar_sms.calendar_sms import sendSMS
     >>> print sendSMS('Hello, World!')
+
+Send SMS in background:
+----------
+1. Install django-celery:
+    $ pip install django-celery
+2. Add the 'djcelery' application to 'INSTALLED_APPS' in settings
+3. Add django-calendar-sms configuration into project settings:
+    CELERY_IMPORTS = ('calendar_sms',)
+4. Sync database (./manage.py syncdb)
+5. Run Rabbit-MQ:
+    $ sudo rabbitmq-server
+6. Run celery daemon in project directory:
+    $ python manage.py celery worker --loglevel=info
+7. Try to send sms:
+    >>> from calendar_sms.tasks import SMSSend
+    >>> SMSSend.delay('Hello, World (background task)!')
+
 
 ------------------------------------------
 * You can use multi accounts on one or several sites

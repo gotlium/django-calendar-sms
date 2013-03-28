@@ -127,7 +127,7 @@ class DjangoCalendarSMS(object):
         if self.__get_accounts() and title:
             self.__run()
         else:
-            self.__message('Active accounts not found')
+            self.__message('Active accounts not found!')
 
 
 def sendSMS(*args, **kwargs):
