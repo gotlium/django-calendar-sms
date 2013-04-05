@@ -1,10 +1,11 @@
 # -*- coding: utf-8 -*-
 
 from time import strftime, gmtime, time, sleep
-from gdata.calendar.service import *
+from gdata.calendar.service import gdata, atom, CalendarService
 
 from django.forms.models import model_to_dict
 from django.contrib.sites.models import Site
+from django.core.exceptions import ObjectDoesNotExist
 
 from models import CalendarSMSSettings, CalendarSMSLogs
 
@@ -126,8 +127,10 @@ class DjangoCalendarSMS(object):
 
         if self.__get_accounts() and title:
             self.__run()
-        else:
+        elif self.debug:
             self.__message('Active accounts not found!')
+        else:
+            raise ObjectDoesNotExist('Accounts not installed.')
 
 
 def sendSMS(*args, **kwargs):
