@@ -19,4 +19,4 @@ env:
   - DJANGO=1.5.1
 branches:
   only:
-    - develop
+    - master
