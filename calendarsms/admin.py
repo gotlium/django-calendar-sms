@@ -2,8 +2,9 @@
 
 from django.contrib import admin
 
-from models import (CalendarSMSLogs, CalendarSMSWebsites, CalendarSMSSettings)
-from forms import CalendarSMSSettingsForm
+from calendarsms.models import (
+    CalendarSMSLogs, CalendarSMSWebsites, CalendarSMSSettings)
+from calendarsms.forms import CalendarSMSSettingsForm
 
 
 class CalendarSMSSettingsInline(admin.TabularInline):
@@ -18,7 +19,7 @@ class CalendarSMSLogsAdmin(admin.ModelAdmin):
         'email', 'title', 'content', 'status', 'created', 'updated',
     )
     list_display_links = ('title',)
-    list_filter = ('status', 'created', 'updated', 'email__website', 'email')
+    list_filter = ('status', 'created', 'updated', 'email__website', 'email',)
     ordering = ('created',)
 
     def has_add_permission(self, request, obj=None):
@@ -36,7 +37,7 @@ class CalendarSMSWebsitesAdmin(admin.ModelAdmin):
         'site', 'status', 'created', 'updated', 'id',
     )
     list_display_links = ('site',)
-    list_filter = ('status', 'created', 'updated')
+    list_filter = ('status', 'created', 'updated',)
     fields = ('site', 'status',)
     ordering = ('created',)
     inlines = (CalendarSMSSettingsInline,)

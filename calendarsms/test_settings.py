@@ -19,7 +19,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.admin',
-    'calendar_sms',
+    'calendarsms',
 ]
 
 TEMPLATE_LOADERS = (

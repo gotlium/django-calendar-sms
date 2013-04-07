@@ -1,10 +1,10 @@
-from setuptools import setup
-from calendar_sms import VERSION
+from setuptools import setup, find_packages
+from calendarsms import VERSION
 
 
 setup(
     name='django-calendar-sms',
-    version=".".join(map(str, VERSION)),
+    version=VERSION,
     description='This reusable Django app can help you to send sms via '
                 'Google Calendar.',
     keywords="django sms",
@@ -12,8 +12,8 @@ setup(
     author="GoTLiuM InSPiRiT",
     author_email='gotlium@gmail.com',
     url='http://github.com/gotlium/django-calendar-sms',
-    packages=['calendar_sms'],
-    package_data={'calendar_sms': [
+    packages=find_packages(exclude=['demo']),
+    package_data={'calendarsms': [
         'locale/ru/LC_MESSAGES/django.*',
     ]},
     include_package_data=True,

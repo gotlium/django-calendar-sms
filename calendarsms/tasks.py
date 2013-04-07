@@ -2,7 +2,7 @@
 
 from celery.task import Task
 
-from calendar_sms import sendSMS
+from calendarsms import sendSMS
 
 
 class SMSSend(Task):

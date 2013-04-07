@@ -2,7 +2,7 @@
 
 from django import forms
 
-from models import CalendarSMSSettings
+from calendarsms.models import CalendarSMSSettings
 
 
 class CalendarSMSSettingsForm(forms.ModelForm):

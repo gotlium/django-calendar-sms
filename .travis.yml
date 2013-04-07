@@ -4,15 +4,15 @@ python:
   - "2.7"
 before_install:
   - export PIP_USE_MIRRORS=true
-  - export DJANGO_SETTINGS_MODULE=calendar_sms.test_settings
+  - export DJANGO_SETTINGS_MODULE=calendarsms.test_settings
 install:
   - pip install -e .
   - pip install -r requirements/tests.txt Django==$DJANGO
 before_script:
-  - flake8 calendar_sms
+  - flake8 calendarsms
 script:
-  - coverage run --branch --source=calendar_sms `which django-admin.py` test calendar_sms
-  - coverage report --omit="calendar_sms/test*"
+  - coverage run --branch --source=calendarsms `which django-admin.py` test calendarsms
+  - coverage report --omit="calendarsms/test*"
 env:
   - DJANGO=1.3.7
   - DJANGO=1.4.5

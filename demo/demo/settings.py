@@ -133,7 +133,7 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
-    'calendar_sms',
+    'calendarsms',
     # 'rosetta',
 
 )
@@ -142,7 +142,7 @@ try:
     import celery
 
     INSTALLED_APPS += ('djcelery',)
-    CELERY_IMPORTS = ('calendar_sms',)
+    CELERY_IMPORTS = ('calendarsms',)
 except ImportError:
     pass
 

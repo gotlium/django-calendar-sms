@@ -74,8 +74,8 @@ class DjangoCalendarSMS(object):
     def __remove(self):
         try:
             self.cal_client.DeleteEvent(self.edit_link)
-        except Exception, msg:
-            self.__message(msg)
+        except Exception:
+            self.__message('Can not remove event')
 
     def __add(self):
         self.cal_client = CalendarService(
@@ -97,11 +97,11 @@ class DjangoCalendarSMS(object):
                 self.__save(True)
                 self.__message('successfully')
                 break
-            except Exception, msg:
+            except Exception:
                 if self.attempts == (i + 1):
                     self.__save(False)
                 self.__remove()
-                self.__message(msg)
+                self.__message('Can not save event')
             sleep(self.delays)
             del self.cal_client
             self.__message('attempt %d' % (i + 1))

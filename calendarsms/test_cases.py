@@ -6,8 +6,8 @@ from django.core.exceptions import ObjectDoesNotExist
 from django.contrib.sites.models import Site
 from django.test import TestCase
 
-from calendar_sms.calendar_sms import sendSMS
-from calendar_sms.models import (
+from calendarsms.calendarsms import sendSMS
+from calendarsms.models import (
     CalendarSMSWebsites, CalendarSMSSettings, CalendarSMSLogs)
 
 
