@@ -12,7 +12,7 @@ Google Calendar (for free) on your Django Project.
 ------------------------------------------
 
 Installation:
-----------
+-------------
 1. Package:
     $ git clone https://github.com/gotlium/django-calendar-sms.git
     $ cd django-calendar-sms && sudo python setup.py install
@@ -30,7 +30,7 @@ Usage:
     >>> print sendSMS('Hello, World!')
 
 Send SMS in background:
-----------
+-----------------------
 1. Install django-celery:
     $ pip install django-celery
 2. Add the 'djcelery' application to 'INSTALLED_APPS' in settings
@@ -46,5 +46,5 @@ Send SMS in background:
     >>> SMSSend.delay('Hello, World (background task)!')
 
 
-------------------------------------------
-* You can use multi accounts on one or several sites
+**You can use multi accounts on one or several sites**
+
