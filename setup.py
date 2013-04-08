@@ -8,7 +8,7 @@ setup(
     description='This reusable Django app can help you to send sms via '
                 'Google Calendar.',
     keywords="django sms",
-    long_description=open('README').read(),
+    long_description=open('README.rst').read(),
     author="GoTLiuM InSPiRiT",
     author_email='gotlium@gmail.com',
     url='http://github.com/gotlium/django-calendar-sms',
