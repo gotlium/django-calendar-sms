@@ -27,14 +27,14 @@ Installation:
 
     $  sudo pip install django-calendar-sms
 
-2. Add the '``calendar_sms``' application to '``INSTALLED_APPS``' in your settings file (usually '``settings.py``')
+2. Add the ``calendar_sms`` application to ``INSTALLED_APPS`` in your settings file (usually ``settings.py``)
 3. Sync database (``./manage.py syncdb``)
 
 
 Usage:
 ------
 1. Setup Google Account data for current website on admin panel
-2. Try to send sms from console (``./manage.py shell``):
+2. Try to send sms from shell (``./manage.py shell``):
 
     >>> from calendar_sms.calendar_sms import sendSMS
     >>> print sendSMS('Hello, World!')
@@ -46,21 +46,27 @@ Send SMS in background:
 .. code-block:: bash
 
     $  pip install django-celery
-2. Add the '``djcelery``' application to '``INSTALLED_APPS``' in settings
+
+2. Add the ``djcelery`` application to ``INSTALLED_APPS`` in settings.py
 3. Add django-calendar-sms configuration into project settings:
+
 .. code-block:: python
+
     CELERY_IMPORTS = ('calendar_sms',)
+
 4. Sync database (``./manage.py syncdb``)
 5. Run Rabbit-MQ:
 
 .. code-block:: bash
 
-    $  sudo rabbitmq-server
+    $  sudo rabbitmq-server -detached
+
 6. Run celery daemon in project directory:
 
 .. code-block:: bash
 
-    $  python manage.py celery worker --loglevel=info
+    $  nohup python manage.py celery worker >& /dev/null &
+
 7. Try to send sms:
 
     >>> from calendar_sms.tasks import SMSSend
