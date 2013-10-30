@@ -75,3 +75,9 @@ Send SMS in background:
 
 **You can use multi accounts on one or several sites**
 
+
+
+.. image:: https://d2weczhvl823v0.cloudfront.net/gotlium/django-calendar-sms/trend.png
+   :alt: Bitdeli badge
+   :target: https://bitdeli.com/free
+
