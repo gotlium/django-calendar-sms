@@ -1,3 +1,5 @@
+from django import VERSION
+
 DATABASE_ENGINE = 'sqlite3'
 
 SITE_ID = 1
@@ -27,4 +29,5 @@ TEMPLATE_LOADERS = (
     'django.template.loaders.app_directories.Loader',
 )
 
-TEST_RUNNER = 'discover_runner.DiscoverRunner'
+if VERSION[:2] < (1, 6):
+    TEST_RUNNER = 'discover_runner.DiscoverRunner'

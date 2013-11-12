@@ -128,14 +128,15 @@ INSTALLED_APPS = (
     'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    # 'grappelli',
-    # Uncomment the next line to enable the admin:
+
+    'grappelli',
     'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
+    'django_extensions',
     'calendar_sms',
-    # 'rosetta',
-
+    'south',
+    'rosetta',
 )
 
 try:

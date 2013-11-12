@@ -24,6 +24,9 @@ class CalendarSMSLogsAdmin(admin.ModelAdmin):
     def has_add_permission(self, request, obj=None):
         return False
 
+    def has_delete_permission(self, request, obj=None):
+        return False
+
     def __init__(self, model, admin_site):
         admin.ModelAdmin.__init__(self, model, admin_site)
         self.readonly_fields = [field.name for field in model._meta.fields]

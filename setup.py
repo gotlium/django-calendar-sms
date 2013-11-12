@@ -17,7 +17,11 @@ setup(
         'locale/ru/LC_MESSAGES/django.*',
     ]},
     include_package_data=True,
-    install_requires=['setuptools', 'gdata', 'django'],
+    install_requires=[
+        'setuptools',
+        'gdata',
+        'django'
+    ],
     zip_safe=False,
     classifiers=[
         'Development Status :: 5 - Production/Stable',
