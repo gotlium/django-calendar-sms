@@ -6,10 +6,10 @@ SMS Notification for Free on Django
     :target: https://travis-ci.org/gotlium/django-calendar-sms
 .. image:: https://coveralls.io/repos/gotlium/django-calendar-sms/badge.png?branch=master
     :target: https://coveralls.io/r/gotlium/django-calendar-sms?branch=master
-.. image:: https://pypip.in/v/django-calendar-sms/badge.png
+.. image:: https://img.shields.io/pypi/v/django-calendar-sms.svg
     :alt: Current version on PyPi
     :target: https://crate.io/packages/django-calendar-sms/
-.. image:: https://pypip.in/d/django-calendar-sms/badge.png
+.. image:: https://img.shields.io/pypi/dm/django-calendar-sms.svg
     :alt: Downloads from PyPi
     :target: https://crate.io/packages/django-calendar-sms/
 
