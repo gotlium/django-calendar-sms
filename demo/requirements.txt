@@ -1,7 +1,7 @@
 django==1.6
 django-grappelli==2.4.7
 South==0.8.2
-Werkzeug==0.9.4
+Werkzeug==0.15.3
 django-extensions==1.2.5
 ipython==1.1.0
 readline==6.2.4.1
