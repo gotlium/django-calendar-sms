@@ -1,4 +1,4 @@
-django==1.6
+django==1.11.28
 django-grappelli==2.4.7
 South==0.8.2
 Werkzeug==0.9.4
